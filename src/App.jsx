@@ -229,7 +229,7 @@ const editItem = (columnId, itemId, columns, setColumns, item) => {
   const newColumns = [...columns];
   const newColumn = newColumns.find((column) => column.id === columnId);
   const newItem = newColumn.items.find((item) => item.id === itemId);
-  newItem.title = item.title;
+  newItem.name = item.name;
   newItem.description = item.description;
   newItem.tag = item.tag;
   setColumns(newColumns);
@@ -345,6 +345,7 @@ const App = () => {
                         border: "4px dashed #233B89",
                         borderRadius: "0.5rem",
                         width: placeholderProps.clientWidth,
+                        transition: "all 0.1s ease",
                       }}
                     />
                   )}
@@ -373,7 +374,6 @@ const App = () => {
             left: 0,
             width: "100%",
             height: "100%",
-            // shadow gradient
             background: "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)",
             zIndex: -1,
           }}

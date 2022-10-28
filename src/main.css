@@ -14,9 +14,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-*:not(body) {
+* {
   box-sizing: border-box;
-  transition: all 0.1s ease;
 }
 
 @keyframes background-light-gradient-animation {
